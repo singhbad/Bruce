@@ -22,11 +22,11 @@ stage('Configure')
                     bat 'cd NumberGenerator & mvn -B -V -U -e clean package'
             }
              
-			 stage ('Test case') {
+			 stage ('Test case') 
                  {
                     junit 'NumberGenerator/target/surefire-reports/*.xml, allowEmptyResults: true'
                         }
-                 }
+                 
                
 
            
