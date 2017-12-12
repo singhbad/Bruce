@@ -7,15 +7,21 @@ pipeline {
         jdk 'java8'
     }
 	
-	options
+	
+    stages 
+	{
+	stage ('Configure')
+	
+		
 	{
 	
-	env.PATH = "${tool 'maven-3.3.9'}/bin:${env.PATH}"
 	version = '1.0.' + env.BUILD_NUMBER
 	currentBuild.displayName = version
 	
 	}
-    stages {
+	
+	
+	
 	stage ('Initialize') {
             steps {
                 bat '''
