@@ -11,11 +11,7 @@ pipeline {
     stages 
 	{
 	stage ('Configure')
-	steps {
 	
-	bat '''
-			echo " Hi"
-	    '''
 	
 		
 	script{
@@ -25,7 +21,7 @@ pipeline {
 	
 	}
 	
-	}
+	
 	
 	stage ('Initialize') {
             steps {
