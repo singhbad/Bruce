@@ -10,19 +10,6 @@ pipeline {
 	
     stages 
 	{
-	stage ('Configure')
-	
-	
-		
-	script{
-	
-	version = '1.0.' + env.BUILD_NUMBER
-	currentBuild.displayName = version
-	
-	}
-	
-	
-	
 	stage ('Initialize') {
             steps {
                 bat '''
