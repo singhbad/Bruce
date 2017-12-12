@@ -8,7 +8,7 @@ stage('Configure')
 
 
 
-	
+	stages{
 	
    
 	
@@ -39,4 +39,4 @@ stage('Configure')
             }
         }
     
-
+}
