@@ -1,24 +1,18 @@
-pipeline {
-    agent {
-        label "master"
-    }
-    tools {
-        maven 'Maven3.1.1'
-        jdk 'java8'
-    }
+node {
+stage('Configure')
+{
+  env.PATH = "${tool 'maven-3.3.9'}/bin:${env.PATH}"
+	version = '1.0.' + env.BUILD_NUMBER
+	currentBuild.displayName = version
+}
+
+
+}
 	
 	
-    stages 
-	{
+   
 	
-	stage{
-	withEnv(['env.PATH = "${tool \'maven-3.3.9\'}/bin:${env.PATH}"', 
-	'version = \'1.0.\' + env.BUILD_NUMBER', 
-	'currentBuild.displayName = version']) {
-    
-	}
 	
-	}
 	stage ('Initialize') {
             steps {
                 bat '''
