@@ -10,7 +10,7 @@ node
         {
             
     bat '''
-        echo "PATH = %PATH%"
+        
         echo "M2_HOME = %M2_HOME%"
         '''
             
@@ -36,11 +36,11 @@ node
 			  }
 		stage ('Deploy')
 			 {
-			 bat '''
+			 sh '
 			 
 			 cp NumberGenerator/target/NumberGenerator-1.0-SNAPSHOT.jar D:/Paperboat/jar
 			 
-			 '''
+			 '
 			 
 			 }
      }
