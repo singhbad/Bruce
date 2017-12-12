@@ -34,6 +34,14 @@ node
 			  
 				archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 			  }
+		stage ('Deploy')
+			 {
+			 bat '
+			 
+			 cp NumberGenerator/target/NumberGenerator-1.0-SNAPSHOT.jar D:/Paperboat/jar
+			 '
+			 
+			 }
      }
 	 
 	 }
