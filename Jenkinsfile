@@ -36,11 +36,11 @@ node
 			  }
 		stage ('Deploy')
 			 {
-			 sh '
+			 sh '''
 			 
 			 cp NumberGenerator/target/NumberGenerator-1.0-SNAPSHOT.jar D:/Paperboat/jar
 			 
-			 '
+			 '''
 			 
 			 }
      }
